@@ -1,0 +1,30 @@
+<h1>THE ULTIMATE LIST SITE!</h1>
+
+<form class = "input-form">
+    <label for="textbox">Type your ULTIMATE TO-DO ITEM!</label>
+    <input type="text" id = "textbox" name = "text">
+    <button id = "submit-btn" data-id='{{id}}' data-finished = '{{finished}}'>Submit</button>
+
+</form>
+
+<p>After you've created your EPIC to-do item, you can click on it to move it to the DONE pile, where you can either gawk at a job well done, or click on the DONE item to delete it forever.</p>
+
+<h2>TO-DO PILE</h2>
+<ol>
+    {{#each list}}
+        {{#unless this.finished}}
+            <li data-id = {{this.id}} data-finished = {{this.finished}}>{{this.text}}</li>
+        {{/unless}}
+    {{/each}}
+</ol>
+
+<h2>THE DONE PILE</h2>
+<ol>
+    {{#each list}}
+        {{#if this.finished}}
+            <li data-id = {{this.id}} data-finished = {{this.finished}}>{{this.text}}</li>
+        {{/if}}
+    {{/each}}
+</ol> 
+
+<script src = "/assets/logic.js"></script>
