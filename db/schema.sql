@@ -1,5 +1,5 @@
-CREATE DATABASE ultimateDB;
-USE ultimateDB;
+CREATE DATABASE oc4qqcj9hpvvscaj;
+USE oc4qqcj9hpvvscaj;
 
 CREATE TABLE list (
     id INT NOT NULL AUTO_INCREMENT,
